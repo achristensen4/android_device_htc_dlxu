@@ -172,3 +172,4 @@ ro.service.dpsvr.enabled=true
 ro.vendor.extension_library=/system/lib/libqc-opt.so
 net.bt.name=Android
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
+

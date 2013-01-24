@@ -6,6 +6,4 @@
 /recovery	emmc		/dev/block/mmcblk0p20
 /sdcard		datamedia	/dev/null
 /system		ext4		/dev/block/mmcblk0p32
-/devlog		ext4		/dev/block/mmcblk0p24
-/reserve        vfat            /dev/block/mmcblk0p31
-/external_sd    vfat   /dev/block/vold/179:65
+/external_sd	vfat		/dev/block/vold/179:65

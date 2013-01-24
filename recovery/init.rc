@@ -10,18 +10,19 @@ on init
     export EXTERNAL_STORAGE /sdcard
 
     symlink /system/etc /etc
-    symlink /data/media /sdcard
 
     mkdir /sdcard
     mkdir /system
     mkdir /data
-    mkdir /data/media 0775 media_rw media_rw
-    chown media_rw media_rw /data/media
     mkdir /cache
     mount /tmp /tmp tmpfs
 
     chown root shell /tmp
     chmod 0775 /tmp
+    chmod 0775 /data
+    chown media_rw media_rw /data/media
+    chmod 0775 /system
+    chmod 0775 /cache
 
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 18D1
@@ -58,11 +59,12 @@ service detect_key /sbin/detect_key
 
 service offmode_charging /sbin/offmode_charging
     disabled
+    oneshot
 
 # Always start adbd on userdebug and eng builds
 on property:ro.debuggable=1
-    #write /sys/class/android_usb/android0/enable 1
-    #start adbd
+    write /sys/class/android_usb/android0/enable 1
+    start adbd
     setprop service.adb.root 1
 
 # Restart adbd so it can run as root

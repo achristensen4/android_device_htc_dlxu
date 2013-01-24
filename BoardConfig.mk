@@ -3,12 +3,13 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/htc/dlxu/BoardConfigVendor.mk
 
+TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := unknown
-TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI := armeabi
 TARGET_BOOTLOADER_BOARD_NAME := dlxu
 
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=dlx user_debug=31
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=dlxu user_debug=31
 BOARD_KERNEL_BASE := 0x80600000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_FORCE_RAMDISK_ADDRESS := 0x81a08000
@@ -24,3 +25,4 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 TARGET_RECOVERY_INITRC := device/htc/dlxu/recovery/init.rc
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
+
