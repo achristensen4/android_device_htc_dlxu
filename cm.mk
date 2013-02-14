@@ -14,5 +14,5 @@ $(call inherit-product, device/htc/dlxu/device_dlxu.mk)
 PRODUCT_DEVICE := dlxu
 PRODUCT_NAME := cm_dlxu
 PRODUCT_BRAND := htc
-PRODUCT_MODEL := dlxu
-PRODUCT_MANUFACTURER := htc
+PRODUCT_MODEL := HTC X920e
+PRODUCT_MANUFACTURER := HTC
