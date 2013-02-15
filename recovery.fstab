@@ -6,4 +6,3 @@
 /recovery	emmc		/dev/block/mmcblk0p20
 /sdcard		datamedia	/dev/null
 /system		ext4		/dev/block/mmcblk0p32
-/external_sd	vfat		/dev/block/vold/179:65
