@@ -3,15 +3,17 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/htc/dlxu/BoardConfigVendor.mk
 
-TARGET_ARCH := arm
-TARGET_NO_BOOTLOADER := true
+# Platform
 TARGET_BOARD_PLATFORM := msm8960
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
+
+# Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_ARCH_VARIANT_CPU := cortex-a9
-TARGET_BOOTLOADER_BOARD_NAME := dlxu
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_SMP := true
 
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=dlxu user_debug=31
 BOARD_KERNEL_BASE := 0x80600000
